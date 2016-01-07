@@ -11,13 +11,14 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -26,44 +27,263 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">asdf</h3>
-      </div>
 
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-          
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-          
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-          
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <a href="#" id="header"><img src="./images/logo.jpg"></a>
         </div>
       </div>
 
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+      <div class="row">
+        <div id="plan-list" class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
+          <ul class="list-unstyled">
+            <li class="active" data-plan="1">Pack vive</li>
+            <li data-plan="2">Pack vivemás</li>
+            <li data-plan="3">Pack vivepro</li>
+          </ul>
+        </div>
+        <div id="products" class="col-xs-12 col-sm-12 col-md-9 col-lg-10">
+          <div class="box active" data-box="1">
+            <div class="plan">
+
+              <div data-content="1">
+                <div class="row">
+                  <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                    <img src="./images/imagentriplepackvive.png">
+                    <h2>$41.990</h2>
+                    <p>Por 6 Meses * * <br/><span>(Valor ref. $47.990 mensuales)</span></p>
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4>TV Hogar HD</h4>
+                        <ul class="list-unstyled">
+                          <li>79 canales</li>
+                          <li>+50 canales HD</li>
+                          <li>+ 1 d-BOX HD</li>
+                          <li>+ VOD</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4>Mega 15</h4>
+                        <ul class="list-unstyled">
+                          <li>WiFi</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4>Fono Ilimitado 100 Móvil</h4>
+                        <ul class="list-unstyled">
+                          <li>Llamadas ilimitadas a red fija + 100 minutos mensuales a móviles.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="divisor">
+                      <p class="label-plan purple">DESCUENTO</p>
+                      <p><strong class="purple">$6.000</strong> <span>por 6 meses</span></p><br/>
+                      <p class="label-plan orange">CONTRATANDO ONLINE</p>
+                      <p><strong class="orange">GRATIS</strong> <span>la instalación</span></p>
+                      <p><strong class="orange">$10.000</strong> <span>de descuento en la primera boleta *</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end data-content -->
+
+            </div>
+            <div class="purchase">
+              <div class="buy-action clearfix">
+                <button type="button" class="btn btn-default pull-left buy">¡Lo quiero!</button>
+                <a href="#" class="pull-right"><img src="./images/ico-bullet-red.png"> Más info</a>
+              </div>
+              <div class="validation clearfix">
+                <h4>Ingresa tus datos y nos comunicaremos contigo a la brevedad.</h4>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form">
+                    <p><span>RUT</span> <input type="text" class="form-control" placeholder="1111111-1"/></p>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form">
+                    <span>Teléfono</span>
+                    <select class="form-control selector">
+                      <option>9</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="2222-2222"/>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-default continue">Continuar</button>
+                <a href="#" class="close-modal">Cerrar</a>
+              </div>
+            </div>
+          </div>
+          <!-- end box -->
+          <div class="box" data-box="2">
+            <div class="plan">
+
+              <div data-content="1">
+                <div class="row">
+                  <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                    <img src="./images/imagentriplepackvivemas.png">
+                    <h2>$43.990</h2>
+                    <p>Por 6 Meses * * <br/><span>(Valor ref. $47.990 mensuales)</span></p>
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4>TV Hogar HD</h4>
+                        <ul class="list-unstyled">
+                          <li>79 canales</li>
+                          <li>+50 canales HD</li>
+                          <li>+ 1 d-BOX HD</li>
+                          <li>+ VOD</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4>Mega 15</h4>
+                        <ul class="list-unstyled">
+                          <li>WiFi</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4>Fono Ilimitado 100 Móvil</h4>
+                        <ul class="list-unstyled">
+                          <li>Llamadas ilimitadas a red fija + 100 minutos mensuales a móviles.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="divisor">
+                      <p class="label-plan purple">DESCUENTO</p>
+                      <p><strong class="purple">$6.000</strong> <span>por 6 meses</span></p><br/>
+                      <p class="label-plan orange">CONTRATANDO ONLINE</p>
+                      <p><strong class="orange">GRATIS</strong> <span>la instalación</span></p>
+                      <p><strong class="orange">$10.000</strong> <span>de descuento en la primera boleta *</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end data-content -->
+
+            </div>
+            <div class="purchase">
+              <div class="buy-action clearfix">
+                <button type="button" class="btn btn-default pull-left buy">¡Lo quiero!</button>
+                <a href="#" class="pull-right"><img src="./images/ico-bullet-red.png"> Más info</a>
+              </div>
+              <div class="validation clearfix">
+                <h4>Ingresa tus datos y nos comunicaremos contigo a la brevedad.</h4>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form">
+                    <p><span>RUT</span> <input type="text" class="form-control" placeholder="1111111-1"/></p>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form">
+                    <span>Teléfono</span>
+                    <select class="form-control selector">
+                      <option>9</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="2222-2222"/>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-default continue">Continuar</button>
+                <a href="#" class="close-modal">Cerrar</a>
+              </div>
+            </div>
+          </div>
+          <!-- end box -->
+          <div class="box" data-box="3">
+            <div class="plan">
+
+              <div data-content="1">
+                <div class="row">
+                  <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                    <img src="./images/imagentriplepackvivepro.png">
+                    <h2>$52.990</h2>
+                    <p>Por 6 Meses * * <br/><span>(Valor ref. $47.990 mensuales)</span></p>
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4>TV Hogar HD</h4>
+                        <ul class="list-unstyled">
+                          <li>79 canales</li>
+                          <li>+50 canales HD</li>
+                          <li>+ 1 d-BOX HD</li>
+                          <li>+ VOD</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4>Mega 15</h4>
+                        <ul class="list-unstyled">
+                          <li>WiFi</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <h4>Fono Ilimitado 100 Móvil</h4>
+                        <ul class="list-unstyled">
+                          <li>Llamadas ilimitadas a red fija + 100 minutos mensuales a móviles.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="divisor">
+                      <p class="label-plan purple">DESCUENTO</p>
+                      <p><strong class="purple">$6.000</strong> <span>por 6 meses</span></p><br/>
+                      <p class="label-plan orange">CONTRATANDO ONLINE</p>
+                      <p><strong class="orange">GRATIS</strong> <span>la instalación</span></p>
+                      <p><strong class="orange">$10.000</strong> <span>de descuento en la primera boleta *</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end data-content -->
+
+            </div>
+            <div class="purchase">
+              <div class="buy-action clearfix">
+                <button type="button" class="btn btn-default pull-left buy">¡Lo quiero!</button>
+                <a href="#" class="pull-right"><img src="./images/ico-bullet-red.png"> Más info</a>
+              </div>
+              <div class="validation clearfix">
+                <h4>Ingresa tus datos y nos comunicaremos contigo a la brevedad.</h4>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form">
+                    <p><span>RUT</span> <input type="text" class="form-control" placeholder="1111111-1"/></p>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form">
+                    <span>Teléfono</span>
+                    <select class="form-control selector">
+                      <option>9</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="2222-2222"/>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-default continue">Continuar</button>
+                <a href="#" class="close-modal">Cerrar</a>
+              </div>
+            </div>
+          </div>
+          <!-- end box -->
+        </div>
       </div>
+      <div class="footer"></div>
     </div>
-    
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -79,7 +299,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -94,7 +314,7 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

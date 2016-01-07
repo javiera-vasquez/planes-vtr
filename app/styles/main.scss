@@ -11,83 +11,211 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@font-face {
+  font-family: 'NeoSans';
+  src: url('../fonts/neosansstd-regular-webfont.eot');
+  src: url('../fonts/neosansstd-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/neosansstd-regular-webfont.woff') format('woff'), url('../fonts/neosansstd-regular-webfont.ttf') format('truetype'), url('../fonts/neosansstd-regular-webfont.svg#NeoSansStdRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeoSans';
+  src: url('../fonts/neosansstd-medium-webfont.eot');
+  src: url('../fonts/neosansstd-medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/neosansstd-medium-webfont.woff') format('woff'), url('../fonts/neosansstd-medium-webfont.ttf') format('truetype'), url('../fonts/neosansstd-medium-webfont.svg#NeoSansStdMedium') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Basic setting
+@mixin bold {font-weight: 600;}
+@mixin normal {font-weight: normal;}
+@mixin neo {font-family: 'NeoSans', sans-serif;}
+@mixin light {font-weight: 100;}
+@mixin light-2 {font-weight: 200;}
+// Color variables
+$white: #fff;
+$black: #000;
+$ccc: #ccc;
+$light: #666;
+
+// Basic
+$primary: #FF4164;
+$secondary: #007b82;
+$tooltip: #aed477;
+$purble: #4A003D;
+$orange: #FB8700;
+
+// Alerts
+$good: #3BA656;
+$bad: #fa4266;
+$alert: #f2d84b;
+$red: $bad;
+$asset: #8c004c;
+
+// Colors array
+$colors: #005b7f, #007dac, #00a99d, #6cc17b, #a7003d, #6f2c91, #4b0049;
+
+/* Base reset of bootstrap */
+body, h1, h2, h3, h4, h5, h5 {
+    @include bold;
+    @include neo;
+}
+
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  @include normal;
+  position: relative;
+  padding-bottom: 100px;
+  background: #f5f5f5 url(../images/background.jpg) no-repeat center;
+  background-size: cover;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+.container {
+  min-width: 480px;
+  max-width: 1280px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+a {color: $light;}
+a:focus {outline:0;}
+//.container {min-width: 900px;}
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
+.btn.btn-default {
+  border-radius: 0;
+  border-width: 0;
+  padding: 8px 35px 8px 10px;
+  color: $white;
+  background: $primary url(../images/ico-btn-arrow.png) 85px center no-repeat;
+}
+
+#header img{
+  padding-bottom: 10em;
+}
+
+#plan-list {
+  margin-bottom: 1.5em;
+  li {
+    display: inline;
+    padding: 1em 1.5em;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 2em;
+    cursor: pointer;
+    color: $white;
+    text-shadow: 0 1px 0 rgba($black, 0.5);
+    background-color: rgba($black, 0.5);
+    &:hover {
+      background-color: rgba($primary, 0.8);
+    }
+  }
+  .active {
+    width: 100%;
+    background-color: rgba($primary, 0.8);
+  }
+}
+
+#products {
+  .box {
+    border-radius: 1em;
+    background-color: rgba(#fff, 0.75);
+  }
+  .plan {
+    padding: 1.5em;
+    h2, h4 {
+      line-height: 1;
+      margin: 0 0 .5em;
+    }
+    p {
+      font-size: 14px;
+      span{color: $light;}
+    }
+    h4 {
+      @include normal;
+      font-size: 18px;
+    }
+    .list-unstyled li {font-size: 13px;}
+    .divisor {
+      border-left: 1px solid rgba($black, .2);
+      padding-left: 15px;
+      p {
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .label-plan {
+        color: $white;
+        border-radius: 5px;
+        line-height: 1.5;
+        padding: 5px;
+      }
+      .label-plan.orange {background-color: $orange;}
+      .label-plan.purple {background-color: $purble;}
+    }
+  }
+  .purchase {
+    padding: 1.5em;
+    background-color: rgba(#fff, 1);
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+  }
+  .buy-action {
+    //display: none;
+    animation-duration: 0.25s;
+    a {margin-top: 7px;}
+  }
+  .validation {
+    display: none;
+    animation-duration: 0.5s;
+    h4 {
+      margin: 0;
+      line-height: 1;
+      margin-bottom: 1.5em;
+      color: $light;
+    }
+    .form {
+      //width: 50%;
+      margin-bottom: 1em;
+      span {margin-right: 20px;}
+      .form-control {
+        display: inline;
+        width: 45%;
+      }
+      .selector {
+        width: 15%;
+      }
+    }
+    .close-modal {margin-left: 20px;}
+  }
+}
+
+.footer {}
+
+/* Media queries */
+@media (min-width: $screen-xs-min) {
+   /* rules for mobile horizontal (480 > 768)  */
+}
+@media (min-width: $screen-sm-min) {
+   /* rules for tablet (768 > 992) */
+}
+@media (min-width: $screen-md-min) {
+   /* rules for desktop (992 > 1200) */
+  #plan-list {
     margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+    li {
+      width: 80%;
+      display: block;
+      margin-right: 0;
+      padding: 1em;
+    }
   }
 }
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+@media (min-width: $screen-lg-min) {
+   /* rules for large (> 1200) */
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
